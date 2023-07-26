@@ -1,7 +1,7 @@
 var numberAleatory= Math.floor(Math.random() * 100) + 1;
 var guesses = document.querySelector('.guesses');
 var lastResult = document.querySelector('.lastResult');
-var lowOrHi = document.querySelector('.lowOrHi');
+var lowOrHi = document.querySelector('.lowOrHigh');
 var guessSubmit = document.querySelector('.guessSubmit');
 var guessField = document.querySelector('.guessField');
 var guessCount = 1;
@@ -17,19 +17,19 @@ function checkGuess() {
     if (guessUser === numberAleatory) {
         lastResult.textContent = 'Parabéns! Você acertou!';
         lastResult.style.backgroundColor = 'green';
-        lowOrHi.textContent = '';
+        lowOrHigh.textContent = '';
         configGameOver();
     } else if (guessCount === 10) {
         lastResult.textContent = '!!!FIM DE JOGO!!!';
-        lowOrHi.textContent = '';
+        lowOrHigh.textContent = '';
         configGameOver();
     } else {
         lastResult.textContent = 'Errado!';
         lastResult.style.backgroundColor = 'red';
         if(guessUser < numberAleatory) {
-            lowOrHi.textContent = 'Seu palpite está baixo!';
+            lowOrHigh.textContent = 'Seu palpite está baixo!';
         } else if(guessUser > numberAleatory) {
-            lowOrHi.textContent = 'Seu palpite está alto!';
+            lowOrHigh.textContent = 'Seu palpite está alto!';
         }
     }
 
