@@ -27,9 +27,9 @@ function checkGuess() {
         lastResult.textContent = 'Errado!';
         lastResult.style.backgroundColor = 'red';
         if(guessUser < numberAleatory) {
-            lowOrHi.textContent = 'Seu palpite está muito baixo!';
+            lowOrHi.textContent = 'Seu palpite está baixo!';
         } else if(guessUser > numberAleatory) {
-            lowOrHi.textContent = 'Seu palpite está muito alto!';
+            lowOrHi.textContent = 'Seu palpite está alto!';
         }
     }
 
